@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://deriito.github.io/tags/index.html</loc>
+    
+    <lastmod>2016-10-02T15:54:25.673Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://deriito.github.io/categories/index.html</loc>
     
     <lastmod>2016-10-02T15:51:54.194Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://deriito.github.io/2016/10/02/%E6%89%8B%E7%A0%81%E7%AC%AC%E4%B8%80%E7%AF%87/</loc>
     
     <lastmod>2016-10-02T15:45:08.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://deriito.github.io/tags/index.html</loc>
-    
-    <lastmod>2016-10-02T15:38:38.427Z</lastmod>
     
   </url>
   
