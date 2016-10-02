@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T12:58:58.684Z</updated>
+  <updated>2016-10-02T13:20:45.328Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>手码第一篇</title>
     <link href="http://yoursite.com/2016/10/02/%E6%89%8B%E7%A0%81%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     <id>http://yoursite.com/2016/10/02/手码第一篇/</id>
     <published>2016-10-02T12:58:58.607Z</published>
-    <updated>2016-10-02T12:58:58.684Z</updated>
+    <updated>2016-10-02T13:20:45.328Z</updated>
     
     <content type="html"><![CDATA[<p>##记录下这两天看书看到的死锁的基本概念</p>
 <p>###1.什么是死锁<br>死锁是指两个或两个以上的进程在执行过程中，因争夺资源而造成的一种互相等待的现象。若无外力作用，他们都将无法推进下去。</p>
