@@ -4,9 +4,9 @@
   <subtitle>http://www.deriito.com</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://deriito.com/"/>
   <updated>2016-10-02T13:21:54.833Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://deriito.com/</id>
   
   <author>
     <name>Yang Guang(deriito)</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>手码第一篇</title>
-    <link href="http://yoursite.com/2016/10/02/%E6%89%8B%E7%A0%81%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-    <id>http://yoursite.com/2016/10/02/手码第一篇/</id>
+    <link href="http://deriito.com/2016/10/02/%E6%89%8B%E7%A0%81%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    <id>http://deriito.com/2016/10/02/手码第一篇/</id>
     <published>2016-10-02T12:58:58.607Z</published>
     <updated>2016-10-02T13:21:54.833Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/10/02/hello-world/"/>
-    <id>http://yoursite.com/2016/10/02/hello-world/</id>
+    <link href="http://deriito.com/2016/10/02/hello-world/"/>
+    <id>http://deriito.com/2016/10/02/hello-world/</id>
     <published>2016-10-02T03:47:49.476Z</published>
     <updated>2016-10-02T03:47:49.478Z</updated>
     
