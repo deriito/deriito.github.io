@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://deriito.github.io/"/>
-  <updated>2016-10-02T15:36:14.311Z</updated>
+  <updated>2016-10-02T15:45:08.023Z</updated>
   <id>http://deriito.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://deriito.github.io/2016/10/02/%E6%89%8B%E7%A0%81%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     <id>http://deriito.github.io/2016/10/02/手码第一篇/</id>
     <published>2016-10-02T12:58:58.607Z</published>
-    <updated>2016-10-02T15:36:14.311Z</updated>
+    <updated>2016-10-02T15:45:08.023Z</updated>
     
     <content type="html"><![CDATA[<h2 id="记录下这两天看书看到的死锁的基本概念"><a href="#记录下这两天看书看到的死锁的基本概念" class="headerlink" title="记录下这两天看书看到的死锁的基本概念"></a>记录下这两天看书看到的死锁的基本概念</h2><h3 id="1-什么是死锁"><a href="#1-什么是死锁" class="headerlink" title="1.什么是死锁"></a>1.什么是死锁</h3><p>死锁是指两个或两个以上的进程在执行过程中，因争夺资源而造成的一种互相等待的现象。若无外力作用，他们都将无法推进下去。</p>
 <h3 id="2-条件"><a href="#2-条件" class="headerlink" title="2.条件"></a>2.条件</h3><h5 id="1）互斥条件："><a href="#1）互斥条件：" class="headerlink" title="1）互斥条件："></a>1）互斥条件：</h5><p>指进程对所分配到的资源进行排他性使用，即在一段时间内某资源只由一个进程占用，如果此时还有其他进程请求资源，则请求者只能等待，直到占有资源的进程用毕释放。</p>
@@ -35,6 +35,10 @@
     
     </summary>
     
+      <category term="操作系统" scheme="http://deriito.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="死锁" scheme="http://deriito.github.io/tags/%E6%AD%BB%E9%94%81/"/>
     
   </entry>
   
