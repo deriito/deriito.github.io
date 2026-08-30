@@ -4,7 +4,7 @@ sections:
   - title: Work
     type: entries
     items:
-      - when: "2024 -"
+      - when: "2024 - now"
         what: '<a href="https://en.mobilefactory.jp/">Mobile Factory</a>'
         where: Japan
         text: Backend development for a location-based game.
@@ -31,4 +31,4 @@ sections:
     type: pairs
     items:
       - label: Email
-        value: '<a href="mailto:guangyangok@gmail.com">guangyangok@gmail.com</a>'
+        value: guangyangok [at] gmail.com

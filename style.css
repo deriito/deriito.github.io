@@ -91,6 +91,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   padding: 18px 32px 60px;
   font-size: 13px;
   color: var(--muted);
+  text-align: center;
 }
 
 @media (max-width: 620px) {
@@ -115,8 +116,7 @@ h1 {
   margin: 0;
 }
 
-.role { font-size: 17px; margin: 14px 0 0; color: var(--ink); }
-.lede { font-size: 17px; }
+.lede { font-size: 17px; margin-top: 20px; }
 p { margin: 0 0 20px; }
 
 .rubric {
@@ -198,29 +198,3 @@ section { margin-top: 46px; }
 .prose th, .prose td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); }
 .prose th { color: var(--ink); font-weight: 700; font-size: 14px; }
 .prose hr { border: 0; border-top: 1px solid var(--rule); margin: 40px 0; }
-
-/* ---- home signature ---- */
-.rail { margin: 36px 0 32px; }
-.rail svg { display: block; width: 100%; height: auto; }
-.lane { stroke: var(--rule); stroke-width: 1.5; }
-.held { stroke: var(--accent); stroke-width: 3; }
-.tick { stroke: var(--muted); stroke-width: 1.5; }
-.lane-tag { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
-.rail-note { font-family: var(--mono); font-size: 10px; fill: var(--muted); letter-spacing: .06em; }
-
-.draw {
-  stroke-dasharray: var(--len); stroke-dashoffset: var(--len);
-  animation: draw 1s cubic-bezier(.22,.61,.36,1) forwards;
-}
-.d2 { animation-delay: .18s; }
-.held, .tick, .rail-note { opacity: 0; animation: fade .5s ease forwards; }
-.held { animation-delay: 1s; }
-.tick { animation-delay: 1.1s; }
-.rail-note { animation-delay: 1.3s; }
-
-@keyframes draw { to { stroke-dashoffset: 0; } }
-@keyframes fade { to { opacity: 1; } }
-
-@media (prefers-reduced-motion: reduce) {
-  .draw, .held, .tick, .rail-note { animation: none; stroke-dashoffset: 0; opacity: 1; }
-}
