@@ -1,0 +1,25 @@
+title: Yang Guang
+description: Backend engineer.
+url: "https://www.deriito.com"
+baseurl: ""
+lang: en
+
+nav:
+  - name: Writing
+    url: /writing/
+  - name: About me
+    url: /about/
+
+permalink: /writing/:title/
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<h1>Yang&nbsp;Guang</h1>
+
+<div class="rail" aria-hidden="true">
+  <svg viewBox="0 0 600 74" xmlns="http://www.w3.org/2000/svg">
+    <text class="lane-tag" x="0" y="22">A</text>
+    <text class="lane-tag" x="0" y="52">B</text>
+    <line class="lane draw" style="--len:566" x1="26" y1="18" x2="592" y2="18"></line>
+    <line class="lane draw d2" style="--len:566" x1="26" y1="48" x2="592" y2="48"></line>
+    <line class="held" x1="150" y1="18" x2="330" y2="18"></line>
+    <line class="held" x1="330" y1="48" x2="470" y2="48"></line>
+    <line class="tick" x1="150" y1="10" x2="150" y2="26"></line>
+    <line class="tick" x1="330" y1="10" x2="330" y2="26"></line>
+    <line class="tick" x1="330" y1="40" x2="330" y2="56"></line>
+    <line class="tick" x1="470" y1="40" x2="470" y2="56"></line>
+    <text class="rail-note" x="150" y="70">ACQUIRE</text>
+    <text class="rail-note" x="300" y="70">RELEASE</text>
+    <text class="rail-note" x="440" y="70">COMMIT</text>
+  </svg>
+</div>
+
+<p class="lede">{{ site.data.home.tagline }}</p >
+
+{% if site.posts.size > 0 %}
+<section>
+<p class="rubric">Recent writing</p >
+<ul class="list">
+{% for post in site.posts limit: 5 %}
+  <li><a href="{{ post.url | relative_url }}">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+    <span class="title">{{ post.title }}</span>
+  </a ></li>
+{% endfor %}
+</ul>
+</section>
+{% endif %}

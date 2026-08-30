@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} — {{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+{% feed_meta %}
+</head>
+<body>
+
+<a class="skip" href=" ">Skip to content</a >
+
+<header class="site-head">
+  <a class="wordmark" href="{{ '/' | relative_url }}">Yang&nbsp;Guang</a >
+  <nav aria-label="Sections">
+    {% for item in site.nav %}
+      {% assign here = false %}
+      {% if page.url == item.url %}{% assign here = true %}{% endif %}
+      {% if item.url == "/writing/" and page.layout == "post" %}{% assign here = true %}{% endif %}
+      <a href="{{ item.url | relative_url }}"{% if here %} aria-current="page"{% endif %}>{{ item.name }}</a >
+    {% endfor %}
+  </nav>
+</header>
+
+<main id="main" class="page">
+  {{ content }}
+</main>
+
+<footer class="site-foot">
+  <span>© {{ site.time | date: "%Y" }} Yang Guang</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<article class="prose">
+  <p class="eyebrow"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time></p >
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</article>
+
+<p class="back"><a href="{{ '/writing/' | relative_url }}">← All writing</a ></p >

@@ -1,0 +1,38 @@
+---
+layout: default
+title: About me
+permalink: /about/
+---
+
+<h1>About</h1>
+
+<p class="lede">{{ site.data.about.intro }}</p >
+
+{% for s in site.data.about.sections %}
+<section>
+<p class="rubric">{{ s.title }}</p >
+
+{% if s.type == "entries" %}
+  {% for it in s.items %}
+  <div class="entry">
+    <div class="entry-head">
+      <span class="when">{{ it.when }}</span>
+      <span class="what">{{ it.what }}</span>
+      {% if it.where %}<span class="where">{{ it.where }}</span>{% endif %}
+    </div>
+    <p>{{ it.text }}</p >
+  </div>
+  {% endfor %}
+
+{% elsif s.type == "bullets" %}
+  <ul class="facts">
+    {% for it in s.items %}<li>{{ it }}</li>{% endfor %}
+  </ul>
+
+{% elsif s.type == "pairs" %}
+  <div class="meta">
+    {% for it in s.items %}<div><b>{{ it.label }}</b> — {{ it.value }}</div>{% endfor %}
+  </div>
+{% endif %}
+</section>
+{% endfor %}

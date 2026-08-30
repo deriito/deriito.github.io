@@ -1,0 +1,20 @@
+---
+layout: default
+title: Writing
+permalink: /writing/
+---
+
+<h1>Writing</h1>
+
+{% if site.posts.size > 0 %}
+<ul class="list">
+{% for post in site.posts %}
+  <li><a href="{{ post.url | relative_url }}">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+    <span class="title">{{ post.title }}</span>
+  </a ></li>
+{% endfor %}
+</ul>
+{% else %}
+<p class="lede">Nothing here yet.</p >
+{% endif %}

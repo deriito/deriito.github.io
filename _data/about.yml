@@ -1,0 +1,34 @@
+intro: Backend engineer.
+
+sections:
+  - title: Work
+    type: entries
+    items:
+      - when: "2024 -"
+        what: '<a href="https://en.mobilefactory.jp/">Mobile Factory</a>'
+        where: Japan
+        text: Backend development for a location-based game.
+
+      - when: "2017 - 2019"
+        what: '<a href="https://www.gaea.com/en/">Gaea Mobile</a>'
+        where: China
+        text: MMORPG server development.
+
+  - title: Education
+    type: entries
+    items:
+      - when: "2021 - 2024"
+        what: University of Electro-Communications
+        where: Japan
+        text: M.E., Information and Network Engineering.
+
+      - when: "2013 - 2017"
+        what: Harbin University of Science and Technology
+        where: China
+        text: B.E., Software Engineering.
+
+  - title: Contact
+    type: pairs
+    items:
+      - label: Email
+        value: '<a href="mailto:guangyangok@gmail.com">guangyangok@gmail.com</a>'
