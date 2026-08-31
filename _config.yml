@@ -3,6 +3,7 @@ description: Backend engineer.
 url: "https://www.deriito.com"
 baseurl: ""
 lang: en
+timezone: Asia/Tokyo
 
 author:
   name: Yang Guang
