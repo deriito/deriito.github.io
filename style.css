@@ -15,7 +15,32 @@
 
   --sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --mono: "JetBrains Mono", Consolas, Menlo, monospace;
+
+  /* Lato carries no CJK glyphs. Without a per-language stack the browser
+     picks a default from the visitor's own locale, so Japanese text can
+     end up rendered with Chinese glyph forms. Lato stays first in each
+     stack: fallback is per glyph, so Latin text is unaffected. */
+  --sans-ja:      "Lato", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                  "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP",
+                  Meiryo, sans-serif;
+  --sans-zh-hans: "Lato", -apple-system, BlinkMacSystemFont, "PingFang SC",
+                  "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
+                  sans-serif;
+  --sans-zh-hant: "Lato", -apple-system, BlinkMacSystemFont, "PingFang TC",
+                  "Hiragino Sans CNS", "Microsoft JhengHei", "Noto Sans TC",
+                  sans-serif;
+  --sans-ko:      "Lato", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                  "Noto Sans KR", "Malgun Gothic", sans-serif;
 }
+
+/* Swap the token rather than setting font-family directly: :lang() matches
+   every descendant, which would collide with the .when / .where / time
+   rules that ask for --mono at the same specificity. zh-Hant must follow
+   zh, which it also matches by BCP 47 prefix. */
+:root:lang(ja)      { --sans: var(--sans-ja); }
+:root:lang(zh)      { --sans: var(--sans-zh-hans); }
+:root:lang(zh-Hant) { --sans: var(--sans-zh-hant); }
+:root:lang(ko)      { --sans: var(--sans-ko); }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -162,6 +187,15 @@ section { margin-top: 46px; }
 .list a { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 18px; padding: 16px 0; }
 .list time { font-family: var(--mono); font-size: 13px; color: var(--muted); white-space: nowrap; }
 .title { color: var(--ink); }
+
+/* The list pages are English, so a CJK title inherits the Latin stack.
+   Re-declaring font-family here is required, not just the token: the
+   var() in body's font-family is substituted at body, and descendants
+   inherit the result rather than the reference. */
+.title:lang(ja)      { font-family: var(--sans-ja); }
+.title:lang(zh)      { font-family: var(--sans-zh-hans); }
+.title:lang(zh-Hant) { font-family: var(--sans-zh-hant); }
+.title:lang(ko)      { font-family: var(--sans-ko); }
 .list a:hover .title { color: var(--link); }
 
 .back { font-size: 14px; margin-top: 44px; }

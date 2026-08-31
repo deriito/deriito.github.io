@@ -11,7 +11,7 @@ permalink: /writing/
 {% for post in site.posts %}
   <li><a href="{{ post.url | relative_url }}">
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
-    <span class="title">{{ post.title }}</span>
+    <span class="title"{% if post.lang %} lang="{{ post.lang }}"{% endif %}>{{ post.title }}</span>
   </a></li>
 {% endfor %}
 </ul>
