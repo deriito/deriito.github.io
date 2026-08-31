@@ -18,12 +18,12 @@ sections:
     type: entries
     items:
       - when: "2021 - 2024"
-        what: University of Electro-Communications
+        what: '<a href="https://www.uec.ac.jp/eng/">University of Electro-Communications</a>'
         where: Japan
         text: M.E., Information and Network Engineering.
 
       - when: "2013 - 2017"
-        what: Harbin University of Science and Technology
+        what: '<a href="https://en.hrbust.edu.cn">Harbin University of Science and Technology</a>'
         where: China
         text: B.E., Software Engineering.
 
