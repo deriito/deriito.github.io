@@ -4,7 +4,7 @@ _site/
 Gemfile.lock
 
 .claude/
-.idea
-.vscode
+.idea/
+.vscode/
 .mcp.json
 .DS_Store
