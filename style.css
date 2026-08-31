@@ -81,6 +81,12 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   padding: 8px 14px; z-index: 10;
 }
 
+/* tabindex="-1" on <main> so the skip link actually moves focus. Chrome and
+   Firefox move the sequential focus starting point on their own, Safari does
+   not. No outline: the target was jumped to, not tabbed to, and ringing the
+   whole content area would only confuse. */
+main:focus { outline: none; }
+
 /* ---- nav ---- */
 .site-head {
   max-width: 780px;
