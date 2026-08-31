@@ -33,4 +33,4 @@ sections:
       - label: Email
         value: guangyangok [at] gmail.com
       - label: GitHub
-        value: https://github.com/deriito
+        value: '<a href="https://github.com/deriito/">deriito</a>'
