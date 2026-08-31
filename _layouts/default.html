@@ -3,8 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} — {{ site.title }}{% endif %}</title>
-<meta name="description" content="{{ page.description | default: site.description }}">
+{%- if page.description -%}
+  {%- capture desc -%}{{ page.description }}{%- endcapture -%}
+{%- elsif page.excerpt -%}
+  {%- capture desc -%}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 }}{%- endcapture -%}
+{%- else -%}
+  {%- capture desc -%}{{ site.description }}{%- endcapture -%}
+{%- endif -%}
+{%- assign page_name = page.title | default: site.title -%}
+
+<title>{% if page.url == "/" %}{{ site.title | escape }}{% else %}{{ page_name | escape }} — {{ site.title | escape }}{% endif %}</title>
+<meta name="description" content="{{ desc | escape }}">
+
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page_name | escape }}">
+<meta property="og:description" content="{{ desc | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+{%- if page.layout == 'post' %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- endif %}
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
