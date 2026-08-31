@@ -45,10 +45,3 @@ page in the root with a `permalink`.
     _posts/         articles
     style.css       all styling, light and dark
     CNAME           custom domain — do not delete
-
-## Local preview
-
-    bundle install
-    bundle exec jekyll serve --host 0.0.0.0
-
-Then open port 4000.
