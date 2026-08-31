@@ -2,3 +2,9 @@ _site/
 .jekyll-cache/
 .sass-cache/
 Gemfile.lock
+
+.claude/
+.idea
+.vscode
+.mcp.json
+.DS_Store
