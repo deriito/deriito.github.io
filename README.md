@@ -43,5 +43,6 @@ page in the root with a `permalink`.
     _data/          page content
     _layouts/       page templates
     _posts/         articles
+    assets/         images
     style.css       all styling, light and dark
     CNAME           custom domain — do not delete
