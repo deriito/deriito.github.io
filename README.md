@@ -10,7 +10,7 @@ Create `_posts/YYYY-MM-DD-slug.md`:
     layout: post
     title: Post title
     lang: ja
-    date: 2026-08-20 21:30:00
+    date: 2026-08-31 22:15:00 +0800
     ---
 
     Body in Markdown.
@@ -25,8 +25,8 @@ can be in any language.
   as `fr` or `nb`. It picks the font stack and sets the `lang`
   attribute, and it is what feed readers use to label the entry.
 - Without `date` the post is timestamped 00:00 on the filename date.
-  A bare time is read as Asia/Tokyo; when writing from elsewhere append
-  the offset: `date: 2026-08-20 21:30:00 +0800`.
+  A time with no offset is read in the site timezone, `timezone` in
+  `_config.yml`.
 
 Push to `main`. GitHub builds it. The post shows up on `/writing/`
 and in the list on the home page.
