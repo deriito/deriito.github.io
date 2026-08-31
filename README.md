@@ -9,9 +9,24 @@ Create `_posts/YYYY-MM-DD-slug.md`:
     ---
     layout: post
     title: Post title
+    lang: ja
+    date: 2026-08-20 21:30:00
     ---
 
     Body in Markdown.
+
+Keep the filename slug in ASCII — it becomes the URL. The title itself
+can be in any language.
+
+`lang` and `date` are both optional:
+
+- Without `lang` the post is treated as English. Set it for anything
+  else: `ja`, `zh-Hans`, `zh-Hant`, `ko`, or any Latin-script tag such
+  as `fr` or `nb`. It picks the font stack and sets the `lang`
+  attribute, and it is what feed readers use to label the entry.
+- Without `date` the post is timestamped 00:00 on the filename date.
+  A bare time is read as Asia/Tokyo; when writing from elsewhere append
+  the offset: `date: 2026-08-20 21:30:00 +0800`.
 
 Push to `main`. GitHub builds it. The post shows up on `/writing/`
 and in the list on the home page.
