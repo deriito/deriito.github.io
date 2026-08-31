@@ -4,6 +4,10 @@ url: "https://www.deriito.com"
 baseurl: ""
 lang: en
 
+author:
+  name: Yang Guang
+  uri: https://www.deriito.com
+
 nav:
   - name: Writing
     url: /writing/
