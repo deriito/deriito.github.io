@@ -12,9 +12,9 @@ permalink: /writing/
   <li><a href="{{ post.url | relative_url }}">
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
     <span class="title">{{ post.title }}</span>
-  </a ></li>
+  </a></li>
 {% endfor %}
 </ul>
 {% else %}
-<p class="lede">Nothing here yet.</p >
+<p class="lede">Nothing here yet.</p>
 {% endif %}

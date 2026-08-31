@@ -6,11 +6,11 @@ permalink: /about/
 
 <h1>About</h1>
 
-<p class="lede">{{ site.data.about.intro }}</p >
+<p class="lede">{{ site.data.about.intro }}</p>
 
 {% for s in site.data.about.sections %}
 <section>
-<p class="rubric">{{ s.title }}</p >
+<p class="rubric">{{ s.title }}</p>
 
 {% if s.type == "entries" %}
   {% for it in s.items %}
@@ -20,7 +20,7 @@ permalink: /about/
       <span class="what">{{ it.what }}</span>
       {% if it.where %}<span class="where">{{ it.where }}</span>{% endif %}
     </div>
-    <p>{{ it.text }}</p >
+    <p>{{ it.text }}</p>
   </div>
   {% endfor %}
 

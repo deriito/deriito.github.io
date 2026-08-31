@@ -37,16 +37,16 @@
 </head>
 <body>
 
-<a class="skip" href="#main">Skip to content</a >
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="site-head">
-  <a class="wordmark" href="{{ '/' | relative_url }}">Yang&nbsp;Guang</a >
+  <a class="wordmark" href="{{ '/' | relative_url }}">Yang&nbsp;Guang</a>
   <nav aria-label="Sections">
     {% for item in site.nav %}
       {% assign here = false %}
       {% if page.url == item.url %}{% assign here = true %}{% endif %}
       {% if item.url == "/writing/" and page.layout == "post" %}{% assign here = true %}{% endif %}
-      <a href="{{ item.url | relative_url }}"{% if here %} aria-current="page"{% endif %}>{{ item.name }}</a >
+      <a href="{{ item.url | relative_url }}"{% if here %} aria-current="page"{% endif %}>{{ item.name }}</a>
     {% endfor %}
   </nav>
 </header>

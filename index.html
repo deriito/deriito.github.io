@@ -4,17 +4,17 @@ layout: default
 
 <h1>Yang&nbsp;Guang</h1>
 
-<p class="lede">{{ site.data.home.tagline }}</p >
+<p class="lede">{{ site.data.home.tagline }}</p>
 
 {% if site.posts.size > 0 %}
 <section>
-<p class="rubric">Recent writing</p >
+<p class="rubric">Recent writing</p>
 <ul class="list">
 {% for post in site.posts limit: 5 %}
   <li><a href="{{ post.url | relative_url }}">
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
     <span class="title">{{ post.title }}</span>
-  </a ></li>
+  </a></li>
 {% endfor %}
 </ul>
 </section>
